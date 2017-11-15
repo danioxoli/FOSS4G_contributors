@@ -1,6 +1,6 @@
 # FOSS4G contributors
 
-### this work has been derived from: https://github.com/mgechev/github-contributors-list
+#### This work has been derived from: https://github.com/mgechev/github-contributors-list
 
 ```sh
  $ work in progress ...
