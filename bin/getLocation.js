@@ -46,7 +46,7 @@ var repos = {
     "mapfish/mapfish": ["elemoine", "fredj", "pvalsecc", "bbinet", "spasche", "aabt", "asaunier", "pgiraud", "ybolognini", "cedricmoullet", "damiencorpataux", "fvanderbiest"],
     "georchestra/georchestra": ["fvanderbiest", "pmauduit", "severo", "Vampouille", "mpazos", "tonio", "fgravin", "jdenisgiguere", "pgiraud", "jusabatier", "fphg", "landryb", "yjacolin", "bbinet", "vdorut", "jpklipfel", "MaxiReglisse", "lvinsonneau", "jeremyk6", "sivadmp", "cmangeat", "sbrunner", "MaelREBOUX", "spelhate", "Gaetanbrl", "Louca2014", "pierrejego", "lecault"]
 };
-var authToken = '0045234e18d1b5b816cdfe6d3c615fb51a936bab';
+var authToken = 'your authToken';
 
 var newRepos = {};
 
