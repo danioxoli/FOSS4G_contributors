@@ -39,7 +39,7 @@ var args = {};
 
 var reposWithContrib = {};
 
-args.authToken = '0045234e18d1b5b816cdfe6d3c615fb51a936bab';
+args.authToken = 'yourauthToken ';
 
 var owners = ['OSGeo', 'geomoose', 'GeoNode', 'OSGeo', 'geotalleres', 'GRASS-GIS', 'iTowns', 'libLAS', 'mapbender', 'mapproxy', 'mapquery', 'mapserver', 'OpenDroneMap', 'openlayers', 'maphew', 'geopython', 'parallella', 'pgRouting', 'postgis', 'OSGeo', 'geopython', 'geopython', 'qgis', 'gltn', 'AnalyticalGraphicsInc', 'NASAWorldWind', 'GeoWebCache', 'proj4php', 'istSOS',  'opengeospatial', 'geopaparazzi', 'locationtech', 'Leaflet', 'deegree', '52North', '52North', 'geomajas', 'mapfish', 'georchestra', 'CartoDB'];
 var repos = ['gdal', 'gm3', 'geonode', 'geos', 'geotalleres', 'grass-ci', 'itowns', 'libLAS', 'mapbender', 'mapproxy', 'mapquery', 'mapserver', 'OpenDroneMap', 'openlayers', 'apt', 'OWSLib', 'pal', 'pgrouting', 'postgis', 'proj.4', 'pycsw', 'pywps', 'QGIS', 'stdm', 'cesium', 'WebWorldWind', 'geowebcache', 'proj4php', 'java-core', 'teamengine', 'geopaparazzi', 'udig-platform', 'Leaflet', 'deegree3', 'sos', 'WPS', 'geomajas-project-server', 'mapfish', 'georchestra', 'cartodb'];
