@@ -17,6 +17,7 @@ var path = require('path');
 var fs = require('fs');
 
 var lib = path.dirname(path.dirname(fs.realpathSync(__filename)));
+var csv = require("fast-csv");
 
 
 var logResults = function (obj) {
@@ -35,21 +36,69 @@ var logErrors = function (obj) {
     getRepo(currentRepo);
 };
 
-var args = {};
 
+
+
+/**
+ * Main
+ */
+
+var args = {};
 var reposWithContrib = {};
 
-args.authToken = 'yourauthToken ';
+//Your AUTH token -> https://github.com/settings/tokens
+args.authToken = 'AUTH TOKEN';
 
-var owners = ['OSGeo', 'geomoose', 'GeoNode', 'OSGeo', 'geotalleres', 'GRASS-GIS', 'iTowns', 'libLAS', 'mapbender', 'mapproxy', 'mapquery', 'mapserver', 'OpenDroneMap', 'openlayers', 'maphew', 'geopython', 'parallella', 'pgRouting', 'postgis', 'OSGeo', 'geopython', 'geopython', 'qgis', 'gltn', 'AnalyticalGraphicsInc', 'NASAWorldWind', 'GeoWebCache', 'proj4php', 'istSOS',  'opengeospatial', 'geopaparazzi', 'locationtech', 'Leaflet', 'deegree', '52North', '52North', 'geomajas', 'mapfish', 'georchestra', 'CartoDB'];
-var repos = ['gdal', 'gm3', 'geonode', 'geos', 'geotalleres', 'grass-ci', 'itowns', 'libLAS', 'mapbender', 'mapproxy', 'mapquery', 'mapserver', 'OpenDroneMap', 'openlayers', 'apt', 'OWSLib', 'pal', 'pgrouting', 'postgis', 'proj.4', 'pycsw', 'pywps', 'QGIS', 'stdm', 'cesium', 'WebWorldWind', 'geowebcache', 'proj4php', 'java-core', 'teamengine', 'geopaparazzi', 'udig-platform', 'Leaflet', 'deegree3', 'sos', 'WPS', 'geomajas-project-server', 'mapfish', 'georchestra', 'cartodb'];
+//Input CSV to read
+args.inputFile="input/repo_list.csv"
 
+//Output file to save
+args.outputFile= 'output/repositories.json'
+
+//List of owners that will be filled
+var owners=[]
+
+//List of repos that will be filled
+var repos = []
+
+//CSV to read
+var stream = fs.createReadStream(args.inputFile);
+
+//Skip first line of csv
+var firstLine=true;
+
+//Repo index to loop
 var currentRepo = 0;
+/**
+ * Read from CSV
+ */
+
+
+//Reading the csv and starting the queries
+var csvStream = csv()
+  .on("data", function(data){
+   if(firstLine)
+       firstLine=false
+    else{
+       owners.push(data[2])
+        repos.push(data[3])
+   }
+  })
+  .on("end", function(){
+    getRepo(currentRepo);
+  });
+
+stream.pipe(csvStream);
+
+
+/**
+ * Side Functionalities
+ */
 
 function getRepo(currentRepo) {
 console.log(currentRepo);
     if (currentRepo == repos.length-1) {
-        fs.writeFile("result.json", JSON.stringify(reposWithContrib), function(err) {
+        fs.writeFile(args.outputFile, JSON.stringify(reposWithContrib), function(err) {
             if(err) {
                 return console.log(err);
             }
@@ -71,7 +120,7 @@ console.log(currentRepo);
     }
 }
 
-getRepo(currentRepo);
+
 
 /**
  * INTERNAL OPTIONS
