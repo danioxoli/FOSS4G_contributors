@@ -4,8 +4,8 @@ Created on Wed Oct 18 09:59:24 2017
 #
 # Project:  FOSS4G contributors
 # Purpose:  Enabling a semi-automatic procedure for a demographic analysis of the FOSS4G developers’ community. 
-#           This script use the output of the GitHub contributors' census (contributors_nationalities20092017.json),
-#           to geocode nationality and create a layer of points to be analised in a GIS like software.
+#           This script use the output of the GitHub contributors' census (resultNationality.json),
+#           to geocode nationality and create a layer of points (.csv) to be analised in a GIS like software.
 # Author:   Daniele Oxoli (daniele.oxoli@polimi.it)
 # Affiliation: Department of Civil and Environmental Engineering | GEOlab, Politecnico di Milano, P.zza Leonardo da Vinci 32, 20133, Milano, Italy
 #
