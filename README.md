@@ -31,7 +31,9 @@
 -  open the output (.csv) in a GIS software to visulize the results and perform further analyses
 
 *note a: geocoding procedure might require time
+
 *note b: you will be able to save in the uotput only users having true "location" information in their GitHub profiles
+
 *note c: a user which is contributor of two or more repo will appear only once in the output
 
 ## GitHub Limit
