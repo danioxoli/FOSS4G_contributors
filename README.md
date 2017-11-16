@@ -2,11 +2,6 @@
 
 #### This work has been derived from: https://github.com/mgechev/github-contributors-list
 
-```sh
- $ work in progress ...
-``` 
-
-
 ## HowTo
 #### Prerequisites
  - Nodejs Installed
