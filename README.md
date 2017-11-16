@@ -15,7 +15,7 @@
 -  run node bin/getlocation to generate the output file with nationalities
 
 #### Files & Locations
--  input/repo_list.csv: CSV with repositories
+-  input/repo_list.csv: CSV with repositories (you can manually modify this list to add or remove repo to be inquired)
 -  output/repositories.json: JSON with repos and list of contributors
 -  output/resultNationality.json: JSON with the repos, contirbutors and their nationality
 
