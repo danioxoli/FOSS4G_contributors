@@ -24,6 +24,14 @@
 -  output/repositories.json: JSON with repos and list of contributors
 -  output/resultNationality.json: JSON with the repos, contirbutors and their nationality
 
+#### Post-processing with Python
+-  input/resultNationality.json: JSON with the repos, contirbutors and their nationality
+-  output/repositories.json: JSON with repos and list of contributors
+-  edit _post_analysis/contibutors_map.py_ by specifying input (.json) and output (.csv) file names with path
+-  open the output (.csv) in a GIS software to visulize the results and perform further analyses
+
+*note: geocoding procedure might require time
+
 ## GitHub Limit
 
 The Github API has a 60-requests-per-hour rate-limit for non-authenticated use. If you need some more then a scope-limited Github OAuth token can be used to boost the limit to 5000.
