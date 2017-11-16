@@ -17,7 +17,7 @@ from geopy.geocoders import Nominatim
 
 #from pandas.io.json import json_normalize
 
-file_in = "path to input ../contributors_nationalities20092017.json"
+file_in = "path to input ../FOSS4G_contributors/output/resultNationality.json"
 
 """
 
@@ -67,7 +67,7 @@ df_contr_clean_b['x'] = x
 df_contr_clean_b['y'] = y     
             
 
-df_contr_clean_b.to_csv("path to output ../contributors_xy.csv")     
+df_contr_clean_b.to_csv("path to output ../FOSS4G_contributors/output/contributors_xy.csv")     
 
 end_time = time.clock()   
 
