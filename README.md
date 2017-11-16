@@ -26,11 +26,13 @@
 
 #### Post-processing with Python
 -  input/resultNationality.json: JSON with the repos, contirbutors and their nationality
--  output/repositories.json: JSON with repos and list of contributors
+-  output/contibutors_xy.csv: .csv file of geo points depicting the position of single users
 -  edit _post_analysis/contibutors_map.py_ by specifying input (.json) and output (.csv) file names with path
 -  open the output (.csv) in a GIS software to visulize the results and perform further analyses
 
-*note: geocoding procedure might require time
+*note a: geocoding procedure might require time
+*note b: you will be able to save in the uotput only users having true "location" information in their GitHub profiles
+*note c: a user which is contributor of two or more repo will appear only once in the output
 
 ## GitHub Limit
 
