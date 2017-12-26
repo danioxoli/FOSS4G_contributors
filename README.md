@@ -24,7 +24,7 @@
  - Python with Geopy library installed
 
 #### How to run
--  edit _post_analysis/contibutors_map.py_ by specifying input (_output/resultNationality.json_) and output (_output/contibutors_xy.csv_) full folder paths
+-  edit _post_analysis/contibutors_map.py_ by specifying input (_output/resultNationality.json_) and output (_output/contibutors_xy.csv_) full folder paths and the geocoding API (default: OSM NOMINATIM)
 -  run _post_analysis/contibutors_map.py_ in a Python console
 -  open the output (.csv) in a GIS software to visualize the results and perform further analyses
 
@@ -34,7 +34,7 @@
 -  _output/contibutors_xy.csv_: .csv file of geo points depicting the position of single users
 
 ***note a***: geocoding procedure might require time </br>
-***note b***: you will be able to save in the uotput only users having true "location" information in their GitHub profiles</br>
+***note b***: you will be able to save in the uotput only users having true "location" information in their GitHub profiles. No-geocoded user are excluded from the post-processing output</br>
 ***note c***: a user which is contributor of two or more repo will appear only once in the output</br>
 
 ## GitHub Limit
