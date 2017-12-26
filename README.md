@@ -30,7 +30,7 @@
 
 
 #### Files & Locations
--  _output/resultNationality.json_: JSON with the repos, contirbutors and their nationality i.e. the output of bin/getlocation.js
+-  _output/resultNationality.json_: JSON with the repos, contirbutors and their nationality i.e. the output of bin/getlocation.js, which here represent input dataset
 -  _output/contibutors_xy.csv_: .csv file of geo points depicting the position of single users
 
 ***note a***: geocoding procedure might require time </br>
