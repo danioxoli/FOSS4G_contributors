@@ -4,32 +4,38 @@
 
 ## HowTo
 #### Prerequisites
- - Nodejs Installed
+ - Nodejs installed
 
 #### How to run
 -  Download the Repository
 -  run 'npm install'
 -  edit bin/githubcontrib.js and insert your AUTH token (you can change the other preferences)
--  edit bin/getLocation and insert your AUTH token (you can change the other preferences)
--  run node bin/githubcontrib to generate the output file with the list of user per repository
--  run node bin/getlocation to generate the output file with nationalities
+-  edit bin/getLocation.js and insert your AUTH token (you can change the other preferences)
+-  run node bin/githubcontrib.js to generate the output file with the list of user per repository
+-  run node bin/getlocation.js to generate the output file with nationalities
 
 #### Files & Locations
 -  input/repo_list.csv: CSV with repositories (you can manually modify this list to add or remove repo to be inquired)
 -  output/repositories.json: JSON with repos and list of contributors
 -  output/resultNationality.json: JSON with the repos, contirbutors and their nationality
 
-#### Post-processing with Python
--  input/resultNationality.json: JSON with the repos, contirbutors and their nationality
--  output/contibutors_xy.csv: .csv file of geo points depicting the position of single users
+## Post-processing with Python
+#### Prerequisites
+ - Python with Geopy library installed
+
+#### How to run
 -  edit _post_analysis/contibutors_map.py_ by specifying input (.json) and output (.csv) file names with path
--  open the output (.csv) in a GIS software to visulize the results and perform further analyses
+-  run _post_analysis/contibutors_map.py_ in a Python console
+-  open the output (.csv) in a GIS software to visualize the results and perform further analyses
 
-*note a: geocoding procedure might require time
 
-*note b: you will be able to save in the uotput only users having true "location" information in their GitHub profiles
+#### Files & Locations
+-  input/resultNationality.json: JSON with the repos, contirbutors and their nationality i.e. the output of bin/getlocation.js
+-  output/contibutors_xy.csv: .csv file of geo points depicting the position of single users
 
-*note c: a user which is contributor of two or more repo will appear only once in the output
+***note a***: geocoding procedure might require time </br>
+***note b***: you will be able to save in the uotput only users having true "location" information in their GitHub profiles</br>
+***note c***: a user which is contributor of two or more repo will appear only once in the output</br>
 
 ## GitHub Limit
 
