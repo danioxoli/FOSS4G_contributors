@@ -15,7 +15,7 @@
 -  run node _bin/getlocation.js_ to generate the output file with nationalities
 
 #### Files & Locations
--  _input/repo_list.csv_: CSV with repositories (you can manually modify this list to add or remove repositories to be inquired)
+-  _input/repo_list.csv_: CSV with repositories, you can manually modify this list to add or remove repositories to be inquired
 -  _output/repositories.json_: JSON with repos and list of contributors
 -  _output/resultNationality.json_: JSON with the repos, contirbutors and their nationality
 
@@ -24,7 +24,7 @@
  - Python with Geopy library installed
 
 #### How to run
--  edit _post_analysis/contibutors_map.py_ by specifying input (_output/resultNationality.json_) and output (_output/contibutors_xy.csv_) full folder paths and the geocoding API (default: OSM NOMINATIM)
+-  edit _post_analysis/contibutors_map.py_ by specifying input (use: _output/resultNationality.json_) and output (e.g. _.../output/contibutors_xy.csv_) full folder paths and the geocoding API (default: OSM NOMINATIM)
 -  run _post_analysis/contibutors_map.py_ in a Python console
 -  open the output (.csv) in a GIS software to visualize the results and perform further analyses
 
@@ -34,7 +34,7 @@
 -  _output/contibutors_xy.csv_: .csv file of geo points depicting the position of single users
 
 ***note a***: geocoding procedure might require time </br>
-***note b***: you will be able to save in the uotput only users having true "location" information in their GitHub profiles. No-geocoded user are excluded from the post-processing output</br>
+***note b***: you will be able to save in the uotput only users having true "location" information in their GitHub profiles. No-geocoded users are excluded from the post-processing output</br>
 ***note c***: a user which is contributor of two or more repo will appear only once in the output</br>
 
 ## GitHub Limit
