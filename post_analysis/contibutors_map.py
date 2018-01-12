@@ -17,7 +17,7 @@ from geopy.geocoders import Nominatim
 
 #from pandas.io.json import json_normalize
 
-file_in = "path to input ../FOSS4G_contributors/input/resultNationality.json" #input file path
+file_in = "path to input ../FOSS4G_contributors/output/resultNationality.json" #input file path
 file_out = "path to output ../FOSS4G_contributors/output/contributors_xy.csv" #output file path
 
 """
