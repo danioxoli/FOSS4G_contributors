@@ -28,7 +28,7 @@ file format is: owner1/repo1:[{'name': username1, 'nationality': place1},{'name'
 """
 start_time = time.clock()
 
-df = pd.concat([pd.Series(json.loads(line)) for line in open(file_in, 'r', encoding="utf8")], axis=1).transpose()
+df = pd.concat([pd.Series(json.loads(line)) for line in open(file_in, 'r')], axis=1).transpose()
 
 repo_name = []
 user_name = []
@@ -37,10 +37,10 @@ user_nationality = []
 for repo in list(df):
     print (repo)        
     for item in list(df[repo]):
-        for i in item:
+        for name in item:
             repo_name.append(repo)
-            user_name.append(i['name'])
-            user_nationality.append(i['nationality'])
+            user_name.append(name)
+            user_nationality.append(item[name]['nationality'])
             
 df_contributors = pd.DataFrame()  
 
