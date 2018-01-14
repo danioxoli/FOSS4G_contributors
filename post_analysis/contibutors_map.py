@@ -12,6 +12,7 @@ Created on Wed Oct 18 09:59:24 2017
 """
 import time
 import json
+import csv
 import pandas as pd
 from geopy.geocoders import Nominatim #geocoding with OSM
 from from geopy.geocoders import GoogleV3 #geocoding with Google
@@ -72,7 +73,7 @@ df_contr_clean_b['x'] = x
 df_contr_clean_b['y'] = y     
             
 
-df_contr_clean_b.to_csv(file_out)     
+df_contr_clean_b.to_csv(file_out, encoding = "utf8", quoting=csv.QUOTE_NONNUMERIC)     
 
 end_time = time.clock()   
 
