@@ -13,9 +13,9 @@ Created on Wed Oct 18 09:59:24 2017
 import time
 import json
 import pandas as pd
-from geopy.geocoders import Nominatim
+from geopy.geocoders import Nominatim #geocoding with OSM
+from from geopy.geocoders import GoogleV3 #geocoding with Google
 
-#from pandas.io.json import json_normalize
 
 file_in = "path to input ../FOSS4G_contributors/output/resultNationality.json" #input file path
 file_out = "path to output ../FOSS4G_contributors/output/contributors_xy.csv" #output file path
@@ -50,8 +50,12 @@ df_contributors['nationality'] = user_nationality
 
 df_contr_clean_a = df_contributors.dropna()
                
-geolocator = Nominatim(timeout=None)
+geolocator = Nominatim(timeout=None) # geocoding with OSM
+#to use Google geocodind API:
+#geolocator = GoogleV3(api_key='your API key', timeout=None)
 df_contr_clean_a['coordinates'] = df_contr_clean_a['nationality'].apply(geolocator.geocode)
+
+
 
 df_contr_clean_b = df_contr_clean_a.dropna()
 
