@@ -11,11 +11,11 @@ Created on Wed Oct 18 09:59:24 2017
 #
 """
 import time
+import os
 import json
 import csv
 import pandas as pd
-#from geopy.geocoders import Nominatim #geocoding with OSM
-from geopy.geocoders import GoogleV3 #geocoding with Google
+from geopy.geocoders import GoogleV3, Nominatim
 
 
 file_in = "path to input ../FOSS4G_contributors/output/resultNationality.json" #input file path
@@ -72,7 +72,7 @@ df_contr_clean_b['y'] = y
 df_contr_clean_b.to_csv(file_out, encoding = "utf8", quoting=csv.QUOTE_NONNUMERIC)     
 
 # Additional output with only single users
-file_out_single_users = "path to output(2).../FOSS4G_contributors/output/contributors_single_users_xy.csv" 
+file_out_single_users = os.path.split(file_out)[0] + '/contributors_single_users_xy.csv' 
 df_contr_clean_b_single_users = df_contr_clean_b.drop_duplicates(subset='user', keep='first', inplace=False)
 df_contr_clean_b_single_users.to_csv(file_out_single_users, encoding = "utf8", quoting=csv.QUOTE_NONNUMERIC)
 
