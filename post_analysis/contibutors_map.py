@@ -55,8 +55,6 @@ df_contr_clean_a = df_contributors.dropna()
 geolocator = GoogleV3(api_key='your GOOGLE API key', timeout=None) # geocodind with Google API:
 df_contr_clean_a['coordinates'] = df_contr_clean_a['nationality'].apply(geolocator.geocode)
 
-
-
 df_contr_clean_b = df_contr_clean_a.dropna()
 
 df_contr_clean_b['coordinates'] = df_contr_clean_b['coordinates'].apply(lambda x: (x.latitude, x.longitude))
