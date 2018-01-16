@@ -23,7 +23,7 @@ file_out = "path to output ../FOSS4G_contributors/output/contributors_xy.csv" #o
 
 """
 
-file format is: owner1/repo1:[{'name': username1, 'nationality': place1},{'name': username2, 'nationality': place2},...], 
+input json file format is: owner1/repo1:[{'name': username1, 'nationality': place1},{'name': username2, 'nationality': place2},...], 
                 owner2/repo2:[{'name': username3, 'nationality': place3},{'name': username4, 'nationality': place4},...],...
 
 """
