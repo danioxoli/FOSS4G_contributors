@@ -13,7 +13,7 @@ var repos = require('../output/repositories.json')
 var outputFile="output/resultNationality.json"
 
 //Your AUTH token -> https://github.com/settings/tokens
-var authToken = 'AUTH TOKEN'
+var authToken = 'Your GitHub Personal Access Token'
 
 //Sleep time between requests
 var sleepTime=1000
