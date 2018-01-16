@@ -4,7 +4,7 @@
 
 ## HowTo
 #### Prerequisites
- - Nodejs installed
+ - Nodejs installed (see: https://nodejs.org/en/download/package-manager)
 
 #### How to run
 -  Download the Repository
