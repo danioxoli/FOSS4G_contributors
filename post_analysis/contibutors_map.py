@@ -52,7 +52,7 @@ df_contributors['nationality'] = user_nationality
 df_contr_clean_a = df_contributors.dropna()
                
 #geolocator = Nominatim(timeout=None) # geocoding with OSM
-geolocator = GoogleV3(api_key='your API key', timeout=None) # geocodind with Google API:
+geolocator = GoogleV3(api_key='your GOOGLE API key', timeout=None) # geocodind with Google API:
 df_contr_clean_a['coordinates'] = df_contr_clean_a['nationality'].apply(geolocator.geocode)
 
 
