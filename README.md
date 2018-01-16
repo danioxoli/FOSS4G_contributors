@@ -29,7 +29,7 @@
 #### How to run
 -  edit _post_analysis/contibutors_map.py_ by specifying input (use: _output/resultNationality.json_) and output (e.g. _.../output/contibutors_xy.csv_) full folder paths and the geocoding API (default: OSM NOMINATIM, optional: GOOGLE)
 -  run _post_analysis/contibutors_map.py_ in a Python console
--  open the output (.csv) in a GIS software to visualize the results and perform further analyses
+-  open the output (CSV) in a GIS software to visualize the results and perform further analyses
 
 
 #### Files & Locations
