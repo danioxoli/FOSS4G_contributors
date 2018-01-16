@@ -39,7 +39,7 @@
 
 ***note b***: geocoding procedure might require time </br>
 ***note c***: you will be able to save in the uotput only users having true "location" information in their GitHub profiles. No-geocoded users are excluded from the post-processing output</br>
-***note d***: a user which is contributor of two or more repo will appear more than one time in the output. The column 'user' of the output CSV can be use to filter duplicated users</br>
+***note d***: a user which is contributor of two or more repo will appear more than one time in the output. An additional output CSV as _contributors_single_users_xy.csv_ containing only single users is automatically created in the same position of the main uotput</br>
 
 ## GitHub Limit
 
