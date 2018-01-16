@@ -10,8 +10,8 @@
 -  Download the Repository
 -  Open a terminal and browse to the downloaded Repository folder
 -  run 'npm install'
--  edit _bin/githubcontrib.js_ and insert your AUTH token (you can change the other preferences)
--  edit _bin/getLocation.js_ and insert your AUTH token (you can change the other preferences)
+-  edit _bin/githubcontrib.js_ and insert [your GitHub Personal Access Token] (you can change the other preferences)
+-  edit _bin/getLocation.js_ and insert your GitHub Personal Access Token (you can change the other preferences)
 -  run _node bin/githubcontrib.js_ to generate the output file with the list of user per repository
 -  run _node bin/getlocation.js_ to generate the output file with nationalities
 
@@ -47,3 +47,5 @@ The Github API has a 60-requests-per-hour rate-limit for non-authenticated use. 
 ## License
 
 MIT
+
+[your GitHub Personal Access Token]:<https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/>
