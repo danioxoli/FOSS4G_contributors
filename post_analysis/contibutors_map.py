@@ -69,8 +69,12 @@ for i in df_contr_clean_b.index:
 df_contr_clean_b['x'] = x
 df_contr_clean_b['y'] = y     
             
-
 df_contr_clean_b.to_csv(file_out, encoding = "utf8", quoting=csv.QUOTE_NONNUMERIC)     
+
+# Additional output with only single users
+file_out_single_users = "path to output(2).../FOSS4G_contributors-master/output/contributors_single_users_xy.csv" 
+df_contr_clean_b_single_users = df_contr_clean_b.drop_duplicates(subset='user', keep='first', inplace=False)
+df_contr_clean_b_single_users.to_csv(file_out_single_users, encoding = "utf8", quoting=csv.QUOTE_NONNUMERIC)
 
 end_time = time.clock()   
 
