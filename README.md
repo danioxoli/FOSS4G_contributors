@@ -20,7 +20,7 @@
 -  _output/repositories.json_: JSON with repos and list of contributors
 -  _output/resultNationality.json_: JSON with the repos, contirbutors and their nationality
 
-***note a***: the input CSV list (i.e. repo_list.csv) must contain only links to active repository with more than 0 contributors </br>
+***note a***: the input CSV list (i.e. repo_list.csv) must contain only links to active repositories with more than 0 contributors </br>
 
 ## Post-processing with Python
 #### Prerequisites
