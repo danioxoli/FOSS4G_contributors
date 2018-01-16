@@ -27,7 +27,8 @@
  - Python with Geopy library installed
 
 #### How to run
--  edit _post_analysis/contibutors_map.py_ by specifying input (use: _output/resultNationality.json_) and output (e.g. _.../output/contibutors_xy.csv_) full folder paths and the geocoding API (default: OSM NOMINATIM, optional: GOOGLE)
+-  edit _post_analysis/contibutors_map.py_ by specifying input (use: _output/resultNationality.json_) and output (e.g. _.../output/contibutors_xy.csv_) full folder paths and the geocoding API (default: GOOGLE, optional: OSM NOMINATIM)
+-  edit _post_analysis/contibutors_map.py_ and insert [your GOOGLE API Key] at line 55
 -  run _post_analysis/contibutors_map.py_ in a Python console
 -  open the output (CSV) in a GIS software to visualize the results and perform further analyses
 
@@ -49,3 +50,4 @@ The GitHub Personal Access Token is constrained to a rate-limit of 5000-requests
 MIT
 
 [your GitHub Personal Access Token]:<https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/>
+[your GOOGLE API Key]:<https://developers.google.com/maps/documentation/geocoding/get-api-key>
