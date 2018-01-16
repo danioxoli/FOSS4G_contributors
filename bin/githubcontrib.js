@@ -47,7 +47,7 @@ var args = {};
 var reposWithContrib = {};
 
 //Your AUTH token -> https://github.com/settings/tokens
-args.authToken = 'AUTH TOKEN';
+args.authToken = 'Your GitHub Personal Access Token';
 
 //Input CSV to read
 args.inputFile="input/repo_list.csv"
