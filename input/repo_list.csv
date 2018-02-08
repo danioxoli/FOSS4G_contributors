@@ -21,7 +21,7 @@ openlayers,https://github.com/openlayers/openlayers,openlayers,openlayers
 geomoose,https://github.com/geomoose/gm3,geomoose,gm3
 mapbender,https://github.com/mapbender/mapbender,mapbender,mapbender
 geoserver,https://github.com/geoserver/geoserver,geoserver,geoserver
-mapguide,https://github.com/jumpinjackie/mapguide-maestro
+mapguide,https://github.com/jumpinjackie/mapguide-maestro,jumpinjackie,mapguide-maestro
 gvsig_mobile,https://github.com/gvSIGAssociation/gvsig-mobile,gvSIGAssociation,gvsig-mobile
 gvsig_mobile,https://github.com/gvSIGAssociation/gvsig-web,gvSIGAssociation,gvsig-web
 proj,https://github.com/OSGeo/proj.4,OSGeo,proj.4
