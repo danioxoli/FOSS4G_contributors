@@ -71,10 +71,21 @@ df_contr_clean_b['y'] = y
             
 df_contr_clean_b.to_csv(file_out, encoding = "utf8", quoting=csv.QUOTE_NONNUMERIC)     
 
-# Additional output with only single users
-file_out_single_users = os.path.split(file_out)[0] + '/contributors_single_users_xy.csv' 
+# Additional output reports
+
+#full list
+file_out_contributors = os.path.split(file_out)[0] + '/contributors_full.csv' 
+df_contributors.to_csv(file_out_contributors, encoding = "utf8", quoting=csv.QUOTE_NONNUMERIC)
+
+#full list unique contributors
+file_out_single_users_full = os.path.split(file_out)[0] + '/contributors_unique_full.csv' 
+df_contributors_single_users = df_contributors.drop_duplicates(subset='user', keep='first', inplace=False)
+df_contributors_single_users.to_csv(file_out_single_users_full, encoding = "utf8", quoting=csv.QUOTE_NONNUMERIC)
+
+#unique geocoded contributors
+file_out_single_users = os.path.split(file_out)[0] + '/contributors_unique_xy.csv' 
 df_contr_clean_b_single_users = df_contr_clean_b.drop_duplicates(subset='user', keep='first', inplace=False)
-df_contr_clean_b_single_users.to_csv(file_out_single_users, encoding = "utf8", quoting=csv.QUOTE_NONNUMERIC)
+df_contr_clean_b_single_users.to_csv(df_contr_clean_b_single_users, encoding = "utf8", quoting=csv.QUOTE_NONNUMERIC)
 
 end_time = time.clock()   
 
