@@ -1,6 +1,6 @@
 ALIAS,REPOLINK,OWNER,REPONAME
 geonode,https://github.com/GeoNode/geonode,GeoNode,geonode
-geonetwork, https://github.com/geonetwork/core-geonetwork,geonetwork,core-geonetwork
+geonetwork,https://github.com/geonetwork/core-geonetwork,geonetwork,core-geonetwork
 pycsw,https://github.com/geopython/pycsw,geopython,pycsw
 marble,https://github.com/KDE/marble,KDE,marble
 qgis,https://github.com/qgis/QGIS,qgis,QGIS
