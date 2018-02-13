@@ -97,7 +97,7 @@ stream.pipe(csvStream);
 
 function getRepo(currentRepo) {
 console.log(currentRepo);
-    if (currentRepo == repos.length-1) {
+    if (currentRepo == repos.length) {
         fs.writeFile(args.outputFile, JSON.stringify(reposWithContrib), function(err) {
             if(err) {
                 return console.log(err);
